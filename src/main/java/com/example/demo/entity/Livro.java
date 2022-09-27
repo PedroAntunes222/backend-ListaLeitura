@@ -25,14 +25,32 @@ public class Livro {
     @Column(name = "capa", nullable = false)
     private String capa;
 
-    @Column(name = "nome", nullable = false)
-    private String nome;
+    @Column(name = "titulo", nullable = false)
+    private String titulo;
 
-    @Column(name = "genero", nullable = false)
-    private String genero;
+    @Column(name = "subTitulo", nullable = false)
+    private String subTitulo;
 
-    @Column(name = "sinopse", nullable = false)
+    @Column(name = "generoPrincipal", nullable = false)
+    private String generoPrincipal;
+
+    @Column(name = "generoSecundario", nullable = false)
+    private String generoSecundario;
+
+    @Column(name = "sinopse", nullable = false, length = Integer.MAX_VALUE)
     private String sinopse;
+
+    @Column(name = "paginasLidas", nullable = false)
+    private int paginasLidas;
+
+    @Column(name = "paginasTotais", nullable = false)
+    private int paginasTotais;
+
+    @Column(name = "rating", nullable = false)
+    private float rating;
+
+    @Column(name = "completo", nullable = false)
+    private Boolean completo;
 
 
     @JsonBackReference
