@@ -52,7 +52,6 @@ public class Livro {
     @Column(name = "completo", nullable = false)
     private Boolean completo;
 
-
     @JsonBackReference
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @NotFound(action = NotFoundAction.IGNORE)
